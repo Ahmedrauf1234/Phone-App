@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link rel="shortcut icon" href="Assests/favicon.jpg" type="image/x-icon">
+    <!-- tailwind connect -->
+    <link rel="stylesheet" href="style.css">
+    <!-- alerts connect -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- fontawesome connect -->
+    <script src="https://kit.fontawesome.com/08826ccbb4.js" crossorigin="anonymous"></script>
+    <!-- stylesheet connect -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body  class="bg-[#031525]  text-[#d7dde6]">
+    <!-- ====================Navbar start========================= -->
+    <div class="flex justify-between">
+        <!-- logo -->
+    <div class="ml-5 mt-5">
+      <a href="index.html"><img width="90px" class="logo" src="https://icon-library.com/images/phone-application-icon/phone-application-icon-5.jpg" alt=""></a> 
+        <p class="font-bold text-center logo-text">Mobile Store</p>
+    </div>
+   <!-- end -->
+   <!-- input  -->
+        <div class="mt-7 ">
+            <input class=" input-search w-[400px] rounded p-[3px]" width="100px" type="search" name="" id="">
+            <button class=" search-btn border-2 w-[40px] border-solid text-[#98a2b5] border-[#5f6368] text-center rounded-md p-[2px] hover:text-[#7cacf8]"><span><i  class="fa-solid fa-magnifying-glass"></i></span></button>
+        </div>
+    <!-- end -->
+        <!-- Checkout work -->
+        <div class="mt-5 text-center mr-5">
+        <button onclick="checkOut()" class=" btn flex justify-center items-center gap-1 w-[120px] text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] rounded px-3 text-center py-1 mt-3" >Checkout <span class="text-lg" ><i class="fa-solid fa-cart-shopping"></i></span> </button>
+    </div>
+</div>
+    <!-- ========================Navbar End=============================== -->
+
+<!--============================== phones Aera======================== -->
+<div style="gap: 20px;" id="div" class="parant flex flex-wrap justify-center  items-center mt-4 ">
+</div>
+<!-- ======================End========================== -->
+<!-- ================================Footer========================== -->
+<footer class="bg-[#0d2136] flex justify-between p-3 mt-3 ">
+    <div class="ml-5">
+       <a href="index.html"> <img width="90px" class="foot-logo" src="https://icon-library.com/images/phone-application-icon/phone-application-icon-5.jpg" alt=""></a>
+        <p class="font-bold text-center store-text">Mobile Store</p>
+    </div>
+
+<div>
+    <div>
+        <h2 class="text-2xl connect-text">Connect With Me</h2>
+        <div class="icons-text text-2xl flex gap-3 p-1">
+           <a target="_blank" href="https://www.instagram.com/ahmed_rauf__/"> <i  class="fa-brands fa-instagram"></i></a>
+           <a target="_blank" href="https://github.com/Ahmedrauf1234"><i class="fa-brands fa-github"></i></a>
+           <a target="_blank" href="https://www.linkedin.com/in/m-ahmed123/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="mt-4 text-[#b7cadc] last-text">
+            <h3>Powered By Muhammad Ahmed</h3>
+          </div>
+    </div>
+  
+</div>
+</footer>
+<!-- ==========================End============================ -->
+   
+    
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

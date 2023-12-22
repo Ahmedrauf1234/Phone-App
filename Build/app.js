@@ -155,6 +155,6 @@ function addtoCart(index){
 //==============================Checkout work======================>>
  function checkOut(){
     localStorage.setItem('cartItems',JSON.stringify(CartItems))
-    window.location = 'checkout.html'
+    window.location = 'checkOut.html'
 }
 
