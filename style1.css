@@ -1,0 +1,58 @@
+@media(max-width: 800px){
+    .logo{
+        width: 80px;
+    }
+    .head{
+        font-size: 25px;
+    }
+    .btn{
+        width: 100px;
+    }
+}
+@media(max-width: 500px){
+    .logo{
+        width: 70px;
+    }
+    .head{
+        font-size: 22px;
+    }
+    .btn{
+        width: 95px;
+        font-size: 14px;
+    }
+}
+@media(max-width: 700px){
+    .input-search{
+        width: 300px;
+    }
+}
+@media(max-width: 600px){
+    .input-search{
+        width: 200px;
+    }
+}
+@media(max-width: 500px){
+    .input-search{
+       display: none;
+    }
+    .search-btn{
+        display: none;
+    }
+}
+@media(max-width: 400px){
+   .connect-text{
+    font-size: 18px;
+   }
+   .icons-text {
+     font-size: 18px;
+   }
+   .foot-logo{
+    width: 70px;
+   }
+   .last-text{
+    font-size: 10px;
+   }
+   .store-text{
+    font-size: 13px;
+   }
+}
