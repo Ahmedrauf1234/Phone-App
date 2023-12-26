@@ -38,6 +38,7 @@ renderItems()
 let quantity = document.querySelector('#quantity');
 // let btn = document.querySelector('#btn-dis')
 function decrease(index){
+    div.innerHTML = ''
     if(data[index].quantity === 0){
           data.splice(index,1)
 
@@ -48,6 +49,7 @@ localStorage.setItem('cartItems',JSON.stringify(data))
 renderItems()
 }
 function increase(index){
+    div.innerHTML = ''
    data[index].quantity += 1;
    localStorage.setItem('cartItems',JSON.stringify(data))
     renderItems()
