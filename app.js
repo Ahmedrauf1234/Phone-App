@@ -114,6 +114,7 @@ const phones = [
 //==================================End========================>>
 //===========================Getting element from HTML=====================>>
 const div = document.querySelector('#div');
+let CartItems = [...datafromlocalstorage]
 
 //=================================End======================>>
 phones.map((items,index)=>{
@@ -169,5 +170,5 @@ function addtoCart(index){
 //==============Data from local storage===================>>
 let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
 console.log(datafromlocalstorage);
-let CartItems = [...datafromlocalstorage]
+
 //======================End================>>
