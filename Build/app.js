@@ -17,7 +17,7 @@ const phones = [
         ram: 4,
         rom: 64,
         camera: '10 megapixel',
-        price: 15000
+        price: 29000
     },
     {   
         image : 'https://www.okmobile.com.pk/wp-content/uploads/2023/01/Untitled-design-2-1.png ',
@@ -26,7 +26,7 @@ const phones = [
         ram: 2,
         rom: 16,
         camera: '5 megapixel',
-        price: 15000
+        price: 65000
     },
     {   
         image : 'https://cdn.homeshopping.pk/product_images/g/478/10pro-su__69720_zoom.png',
@@ -35,7 +35,7 @@ const phones = [
         ram: 12,
         rom: 512,
         camera: '25 megapixel',
-        price: 15000
+        price: 75000
     },
     {   
         image : 'https://s7d1.scene7.com/is/image/dish/iPhone_14_Purple_phonewall?$ProductBase$&fmt=webp',
@@ -44,7 +44,7 @@ const phones = [
         ram: 4,
         rom: 1024,
         camera: '30 megapixel',
-        price: 15000
+        price: 19000
     },
     {   
         image : 'https://assorted.downloads.oppo.com/static/assets/images/products/f11pro/m/sec1-959ba38195a4fe8d4301b9b0a33728da06e0b063.jpg',
@@ -53,7 +53,7 @@ const phones = [
         ram: 8,
         rom: 256,
         camera: '20 megapixel',
-        price: 15000
+        price: 17000
     },
     {   
         image : 'https://whatsmobiles.net/wp-content/uploads/2023/02/vivo-y20-whatsmobiles.net_.jpeg',
@@ -116,9 +116,11 @@ const phones = [
 const div = document.querySelector('#div');
 
 //=================================End======================>>
-//================================Cart items====================>>
-let CartItems = []
-///=====================================ENd ======================>>
+//==============Data from local storage===================>>
+let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
+console.log(datafromlocalstorage);
+let CartItems = [...datafromlocalstorage]
+//======================End================>>
 phones.map((items,index)=>{
     div.innerHTML+=`
     <div class="rounded border-2 border-solid border-[#293548] mt-6 p-5 w-[400px]">
@@ -133,22 +135,33 @@ phones.map((items,index)=>{
     <h3 class="text-xl" >price : ${items.price} </h3>
     <button onclick="addtoCart(${index})" class=" text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] rounded px-3 text-center py-1 mt-3" >Add to Cart</button>
 </div>
-</div>`
+</div>` 
 
 })
 //================================Add To cart============================>>
 function addtoCart(index){
     if(CartItems.indexOf(phones[index]) !== -1){
-        // console.log('majood hai');
         let indexNumber = CartItems.indexOf(phones[index])
         CartItems[indexNumber].quantity += 1
         console.log(CartItems);
-        Swal.fire("item Added");
+        Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Quantity Increase",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }else{
         phones[index].quantity = 1;
         CartItems.push(phones[index])
         console.log(CartItems);
-        Swal.fire("item Added");
+        Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your Item Has Been Added to the Cart",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
 
 }

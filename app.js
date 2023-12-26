@@ -116,11 +116,6 @@ const phones = [
 const div = document.querySelector('#div');
 
 //=================================End======================>>
-//==============Data from local storage===================>>
-let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
-console.log(datafromlocalstorage);
-let CartItems = [...datafromlocalstorage]
-//======================End================>>
 phones.map((items,index)=>{
     div.innerHTML+=`
     <div class="rounded border-2 border-solid border-[#293548] mt-6 p-5 w-[400px]">
@@ -171,3 +166,8 @@ function addtoCart(index){
     window.location = 'checkout.html'
 }
 
+//==============Data from local storage===================>>
+let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
+console.log(datafromlocalstorage);
+let CartItems = [...datafromlocalstorage]
+//======================End================>>

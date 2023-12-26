@@ -4,40 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="shortcut icon" href="Assests/favicon.jpg" type="image/x-icon">
     <!-- tailwind connect -->
     <link rel="stylesheet" href="style.css">
     <!-- fontawesome connect -->
     <script src="https://kit.fontawesome.com/08826ccbb4.js" crossorigin="anonymous"></script>
     <!-- stylesheet connect -->
     <link rel="stylesheet" href="style1.css">
+    <!-- alerts connect -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-[#031525]  text-[#d7dde6]">
     <!--============================ Navbar start======================= -->
     <div class="flex justify-between">
         <!-- logo -->
-    <div class="ml-5 mt-3">
-        <img width="90px" src="https://icon-library.com/images/phone-application-icon/phone-application-icon-5.jpg" alt="">
+    <div class="ml-5 mt-3 logo-div ">
+       <a href="index.html"> <img width="70px" src="https://icon-library.com/images/phone-application-icon/phone-application-icon-5.jpg" alt="logo"></a>
         <p class="font-bold text-center">Phone App</p>
     </div>
     <!-- End -->
-
-    
-        <!--heading-->
-        <div>
+    <!--heading-->
+        <!-- <div>
         <h1 class="font-bold text-center mt-5 text-4xl text-[#eeeef0]" >Cart</h1>
-        </div>
-    <!-- ENd -->
+        </div> -->
+    <!-- End -->
         <!-- Back Work -->
         <div class="mt-5 text-center mr-5">
-        <button onclick="window.location = 'index.html'" class=" flex justify-center items-center gap-1 w-[120px] text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] rounded px-3 text-center py-1 mt-3" > <span class="text-lg" > <i class="fa-solid fa-arrow-left"></i> </span>Back</button>
+        <button onclick="back()" class=" rounded-xl flex justify-center items-center gap-1  text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] px-3 text-center py-1 mt-3" > <span class="text-lg text-[#DADCE0]" > <i class="fa-solid fa-arrow-left"></i> </span></button>
     </div>
     <!-- end -->
 </div>
 <!-- =========================Navbar end========================== -->
  <!-- ========================================================== -->
-    <div  id="check-div" class="parant flex flex-wrap gap-5 justify-center  items-center mt-4 ">
 
-        <div class="rounded border-2 border-solid border-[#293548] mt-6 p-3 w-[280px] h-[50%]">
+    <div class="mt-[40px]">
+        <h1 class="font-bold text-center mt-5 text-4xl text-[#eeeef0]" >Cart</h1>
+        </div>
+
+    <div  id="check-div" class="parant px-[15px] flex flex-wrap gap-5 justify-center  items-center mt-4 ">
+
+        <!-- <div class="rounded border-2 border-solid border-[#293548] mt-6 p-3 w-[280px] h-[50%]">
             <div class="img p-2">
                 <img class="w-[200px] h-[200px]"  src=" https://cdn.alloallo.media/catalog/product/samsung/galaxy-s/galaxy-s20/galaxy-s20-cosmic-gray.jpg  " alt="">
         </div>
@@ -52,42 +58,21 @@
             <button class=" border-2 border-solid border-[#d7dde6] rounded-lg mt-2 px-2 py-1 h-9 bg-[#0d2136] text-[#DADCE0] text-center hover:bg-[#36373a]  ">+</button> <br>
             <button class=" border-2 border-solid border-[#d7dde6] rounded-lg mt-7 px-2 py-1 h-9 bg-[#0d2136] text-[#DADCE0] text-center hover:bg-[#16375a]  ">Delete</button>
         </div>
-        </div>
+        </div> -->
+    <!-- End -->
+        
       </div>
       <!-- =======================Category end========= -->
      <!-- ======================total amount=================== -->
         <div class=" mt-5 text-3xl text-center">
-            <h1 class="font-bold">Total Amount :</h1>
+            <h1 class="font-bold">Total Amount : <span class="total" ></span> </h1>
         </div>
         <!-- ==============End========= -->
         <!--======================== Shopmore=================== -->
         <section  class="mt-5 text-center">
-            <button onclick="window.location = 'index.html'" class=" text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] rounded px-3 text-center py-1 mt-3" >Shop More</button>
+            <button onclick="gotoHome()"  class=" mb-3 text-[#202124]  bg-[#7cacf8] hover:bg-[#89b0ef] rounded px-3 text-center py-1 mt-3" >Shop More</button>
         </section>
-
-        <!-- ================================Footer========================== -->
-<footer class="bg-[#0d2136] flex justify-between p-3 mt-3 ">
-    <div class="ml-5">
-       <a href="index.html"> <img width="90px" class="foot-logo" src="https://icon-library.com/images/phone-application-icon/phone-application-icon-5.jpg" alt=""></a>
-        <p class="font-bold text-center store-text">Mobile Store</p>
-    </div>
-
-<div>
-    <div>
-        <h2 class="text-2xl connect-text">Connect With Me</h2>
-        <div class="icons-text text-2xl flex gap-3 p-1">
-           <a target="_blank" href="https://www.instagram.com/ahmed_rauf__/"> <i  class="fa-brands fa-instagram"></i></a>
-           <a target="_blank" href="https://github.com/Ahmedrauf1234"><i class="fa-brands fa-github"></i></a>
-           <a target="_blank" href="https://www.linkedin.com/in/m-ahmed123/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <div class="mt-4 text-[#b7cadc] last-text">
-            <h3>Powered By Muhammad Ahmed</h3>
-          </div>
-    </div>
-  
-</div>
-</footer>
-<!-- ==========================End============================ -->
+<!-- ===================================End=========================>> -->
    
 
 
