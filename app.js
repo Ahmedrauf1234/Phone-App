@@ -114,6 +114,7 @@ const phones = [
 
 //===========================Getting element from HTML=====================>>
 let div = document.querySelector('#div-index');
+let CartItems = [...datafromlocalstorage]
 
 //=================================End======================>>
 
@@ -169,7 +170,7 @@ function addtoCart(index){
 //==============Data from local storage===================>>
 let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
 console.log(datafromlocalstorage);
-let CartItems = [...datafromlocalstorage]
+
 //======================End================>>
 
 
