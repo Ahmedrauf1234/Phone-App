@@ -113,7 +113,7 @@ const phones = [
 ]
 
 //===========================Getting element from HTML=====================>>
-const div = document.querySelector('#div');
+let div = document.querySelector('#div-index');
 
 //=================================End======================>>
 //==============Data from local storage===================>>
@@ -125,7 +125,7 @@ phones.map((items,index)=>{
     div.innerHTML+=`
     <div class="rounded border-2 border-solid border-[#293548] mt-6 p-5 w-[400px]">
     <div class="img p-2">
-    <img src="${items.image}" alt="">
+    <img src="${items.image}" alt="phone">
 </div>
    <div class="text bg-[#0d2136] rounded  mt-4 p-5  ">
     <h3 class="text-2xl font-bold text-[#8AB4f8]"> Brand : ${items.brand}</h3>
