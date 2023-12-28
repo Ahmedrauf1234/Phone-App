@@ -118,9 +118,17 @@ let div = document.querySelector('#div-index');
 
 //=================================End======================>>
 //==============Data from local storage===================>>
+// let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
+// console.log(datafromlocalstorage);
+// let CartItems = [...datafromlocalstorage]
 let datafromlocalstorage = JSON.parse(localStorage.getItem('cartItems'))
 console.log(datafromlocalstorage);
-let CartItems = [...datafromlocalstorage]
+let CartItems;
+if(Array.isArray(datafromlocalstorage)){
+    CartItems = [...datafromlocalstorage]
+}else{
+    CartItems = []
+}
 
 //======================End================>>
 

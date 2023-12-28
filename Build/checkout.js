@@ -1,3 +1,12 @@
+
+//===========================Go home=====================>>
+function gotoHome(){
+    window.location = 'index.html'
+    localStorage.setItem('cartItems',JSON.stringify(CartItems))
+}
+
+
+
 //==================================Data Calling=============================>>
 let items = localStorage.getItem('cartItems')
 let data = JSON.parse(items)
@@ -33,11 +42,12 @@ function renderItems(){
     })
     total.innerHTML = totalAmount
 }
-renderItems()
+renderItems() //initially call 
 //============================= increase and decrease==================>>
 let quantity = document.querySelector('#quantity');
 // let btn = document.querySelector('#btn-dis')
 function decrease(index){
+    div.innerHTML = ''
     if(data[index].quantity === 0){
           data.splice(index,1)
 
@@ -48,6 +58,7 @@ localStorage.setItem('cartItems',JSON.stringify(data))
 renderItems()
 }
 function increase(index){
+    div.innerHTML = ''
    data[index].quantity += 1;
    localStorage.setItem('cartItems',JSON.stringify(data))
     renderItems()
@@ -60,11 +71,7 @@ function deleteItem(index){
 }
 
 
-//===========================Go home=====================>>
-function gotoHome(){
-    window.location = 'index.html'
-    localStorage.setItem('cartItems',JSON.stringify(data))
-}
+
 function back(){
     window.location = 'index.html'
     localStorage.setItem('cartItems',JSON.stringify(data))
